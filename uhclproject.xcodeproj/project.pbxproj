@@ -15,6 +15,8 @@
 		EF1665B81C6C2180003F66CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1665B61C6C2180003F66CF /* LaunchScreen.storyboard */; };
 		EF1665C31C6C2180003F66CF /* uhclprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1665C21C6C2180003F66CF /* uhclprojectTests.swift */; };
 		EF1665CE1C6C2180003F66CF /* uhclprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1665CD1C6C2180003F66CF /* uhclprojectUITests.swift */; };
+		EF1665DC1C6C247C003F66CF /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1665DB1C6C247C003F66CF /* ThirdViewController.swift */; };
+		EF1665DE1C6C3189003F66CF /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1665DD1C6C3189003F66CF /* FourthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		EF1665C91C6C2180003F66CF /* uhclprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uhclprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1665CD1C6C2180003F66CF /* uhclprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uhclprojectUITests.swift; sourceTree = "<group>"; };
 		EF1665CF1C6C2180003F66CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1665DB1C6C247C003F66CF /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		EF1665DD1C6C3189003F66CF /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				EF1665AB1C6C217F003F66CF /* AppDelegate.swift */,
 				EF1665AD1C6C217F003F66CF /* FirstViewController.swift */,
 				EF1665AF1C6C217F003F66CF /* SecondViewController.swift */,
+				EF1665DB1C6C247C003F66CF /* ThirdViewController.swift */,
+				EF1665DD1C6C3189003F66CF /* FourthViewController.swift */,
 				EF1665B11C6C217F003F66CF /* Main.storyboard */,
 				EF1665B41C6C2180003F66CF /* Assets.xcassets */,
 				EF1665B61C6C2180003F66CF /* LaunchScreen.storyboard */,
@@ -264,7 +270,9 @@
 			files = (
 				EF1665B01C6C217F003F66CF /* SecondViewController.swift in Sources */,
 				EF1665AC1C6C217F003F66CF /* AppDelegate.swift in Sources */,
+				EF1665DC1C6C247C003F66CF /* ThirdViewController.swift in Sources */,
 				EF1665AE1C6C217F003F66CF /* FirstViewController.swift in Sources */,
+				EF1665DE1C6C3189003F66CF /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
