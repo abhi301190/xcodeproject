@@ -134,14 +134,46 @@ class GeneralPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     /////////////////////depth/////////////
     
+    @IBOutlet weak var MeasuredDepthLabel: UITextField!
+    
+    @IBOutlet weak var wellDepthlabel: UITextField!
+    
+    @IBOutlet weak var WellFromDeviation: UISwitch!
     
     @IBOutlet weak var WellisDeviatedSwitch: UISwitch!
     
+    @IBOutlet weak var referencepointpicker: UIPickerView!
     
     @IBAction func Wellisdeviated(sender: UISwitch)
     {
+    if sender.on
+    {
+        MeasuredDepthLabel.enabled = true
+        WellFromDeviation.enabled = true
+        }
+        else
+    {
+        MeasuredDepthLabel.enabled = false
+        MeasuredDepthLabel.text = nil
+        WellFromDeviation.enabled = false
+        WellFromDeviation.setOn(false, animated: true)
+        }
+    }
+    
+    @IBAction func WellFromDeviationSwitch(sender: UISwitch)
+    {
+    if sender.on
+    {
+        wellDepthlabel.enabled = false
+        wellDepthlabel.text = nil
+        }
+    else{
+        wellDepthlabel.enabled = true
+        }
     
     }
+    
+    var depthpicker:[String] = ["Choose","RKB","MGL"]
     
     ///////////////////////////////////////
     
@@ -194,10 +226,13 @@ class GeneralPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     ///////////////////WELL/////////////////////
     
-    var pickerData: [String] = ["","Open Hole", "Cased Hole"]
+    var pickerData: [String] = ["Choose","Open Hole", "Cased Hole"]
     
-    var valuestorage = 0
+    var firstcasingdata: [String] = ["22 1/4", "33 1/6", " 22 1/6" ]
+    
+    var lastcasingdata: [String] = ["Choose","22 1/4", "33 1/6", " 22 1/6" ]
 
+    var lastholedata: [String] = ["Choose","22 1/4", "33 1/6", " 22 1/6" ]
     
     
     @IBOutlet weak var firstcasingdepth: UITextField!
@@ -261,6 +296,16 @@ class GeneralPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         WellisDeviatedSwitch.setOn(false, animated: true)
         WellisDeviatedSwitch.tintColor = UIColor.redColor()
         
+        WellFromDeviation.setOn(false, animated: true)
+        WellFromDeviation.tintColor = UIColor.redColor()
+        
+        MeasuredDepthLabel.enabled = false
+        
+        WellFromDeviation.enabled = false
+        
+        
+        referencepointpicker.delegate = self
+        referencepointpicker.dataSource = self
         
         /////////////////////////////////////////
         
@@ -282,7 +327,7 @@ class GeneralPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         //////////////////////////////////////
         
         //////////////////////Well///////////////////////
-       complationtype.dataSource = self
+        complationtype.dataSource = self
         complationtype.delegate = self
         
         lastholelabel.hidden = true
@@ -291,19 +336,63 @@ class GeneralPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         lastcasingdiameter.hidden = true
         lastcasinglabel.hidden = true
         
+        firstcasingdiameter.dataSource = self
+        firstcasingdiameter.delegate = self
+        
+        lastcasingdiameter.delegate = self
+        lastcasingdiameter.dataSource = self
+        
+        lastholediameter.delegate = self
+        lastholediameter.dataSource = self
         /////////////////////////////////////////////////
         
     }
     /////////////////PickerView Complation Type///////////////////////
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView.tag == 1
+        {
         return pickerData.count
-    }
+        }
+        else if pickerView.tag == 2
+        {
+            return depthpicker.count
+        }
+        else if pickerView.tag == 3
+        {
+            return firstcasingdata.count
+        }
+        else if pickerView.tag == 4
+        {
+           return lastcasingdata.count
+        }
+        else
+        {
+            return lastholedata.count
+        }
+        }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
+        if pickerView.tag == 1
+        {
         return pickerData[row]
-     
+        }
+        else if pickerView.tag == 2
+        {
+            return depthpicker[row]
+        }
+        else if pickerView.tag == 3
+        {
+            return firstcasingdata[row]
+        }
+        else if pickerView.tag == 4
+        {
+            return lastcasingdata[row]
+        }
+        else
+        {
+            return lastholedata[row]
+        }
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
     {
@@ -311,7 +400,11 @@ class GeneralPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        valuestorage = row
+       
+        if pickerView.tag == 1
+        {
+    
+        let valuestorage = row
         
         if valuestorage == 0
         {
@@ -322,30 +415,36 @@ class GeneralPage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
             lastcasinglabel.hidden = true
 
         }
-        else if valuestorage == 1
+         if valuestorage == 1
         {
             lastholediameter.hidden = false
             lastholelabel.hidden = false
-            //lastcasingdiameter.hidden = true
-            //lastcasinglabel.hidden = true
+           
           lastcasingdiameter.userInteractionEnabled = false
             
         }
-     else if valuestorage == 2
+            else
+         {
+            
+            lastcasingdiameter.userInteractionEnabled = true
+
+            }
+     if valuestorage == 2
         {
             lastcasinglabel.hidden = false
             lastcasingdiameter.hidden = false
-            //lastholelabel.hidden = true
-            //lastholediameter.hidden = true
-            
             lastholediameter.userInteractionEnabled = false
         }
-        else
-        {
-            NSLog("value")
+            else
+     {
+        lastholediameter.userInteractionEnabled = true
+            }
         }
-       
+        
     }
-    /////////////////////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////
     
+    
+  
 }
