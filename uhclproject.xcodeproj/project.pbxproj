@@ -13,6 +13,7 @@
 		EF1665B81C6C2180003F66CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1665B61C6C2180003F66CF /* LaunchScreen.storyboard */; };
 		EF1665C31C6C2180003F66CF /* uhclprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1665C21C6C2180003F66CF /* uhclprojectTests.swift */; };
 		EF1665CE1C6C2180003F66CF /* uhclprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1665CD1C6C2180003F66CF /* uhclprojectUITests.swift */; };
+		EF659A3C1CAF1AD20097D1C3 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF659A3B1CAF1AD20097D1C3 /* GraphView.swift */; };
 		EFE3F6CF1CAA0D0700EB81A3 /* GeneralPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3F6CE1CAA0D0700EB81A3 /* GeneralPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		EF1665C91C6C2180003F66CF /* uhclprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uhclprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1665CD1C6C2180003F66CF /* uhclprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uhclprojectUITests.swift; sourceTree = "<group>"; };
 		EF1665CF1C6C2180003F66CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF659A3B1CAF1AD20097D1C3 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		EFE3F6CE1CAA0D0700EB81A3 /* GeneralPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				EF1665B61C6C2180003F66CF /* LaunchScreen.storyboard */,
 				EF1665B91C6C2180003F66CF /* Info.plist */,
 				EFE3F6CE1CAA0D0700EB81A3 /* GeneralPage.swift */,
+				EF659A3B1CAF1AD20097D1C3 /* GraphView.swift */,
 			);
 			path = uhclproject;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				EF1665AC1C6C217F003F66CF /* AppDelegate.swift in Sources */,
 				EFE3F6CF1CAA0D0700EB81A3 /* GeneralPage.swift in Sources */,
+				EF659A3C1CAF1AD20097D1C3 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

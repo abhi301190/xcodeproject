@@ -130,20 +130,21 @@
                                             <action selector="kickIntensitySwitch:" destination="iJc-HD-uIP" eventType="valueChanged" id="REd-oW-y7S"/>
                                         </connections>
                                     </switch>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJw-Ws-fCs">
-                                        <rect key="frame" x="166" y="77" width="97" height="48.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xkc-CV-fDq">
                                         <rect key="frame" x="166" y="141" width="97" height="48.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="InfluxvolumeTextbox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="9KS-E7-NfE"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-5O-ecF">
                                         <rect key="frame" x="166" y="200.5" width="97" height="48.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="kickmarginTextbox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="MMS-gD-RcO"/>
+                                        </connections>
                                     </textField>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zS2-yl-xhx">
                                         <rect key="frame" x="307" y="165" width="93.5" height="49"/>
@@ -151,6 +152,14 @@
                                             <action selector="KickMarginSwitch:" destination="iJc-HD-uIP" eventType="valueChanged" id="RQj-EE-9qc"/>
                                         </connections>
                                     </switch>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJw-Ws-fCs">
+                                        <rect key="frame" x="166" y="77" width="97" height="48.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="kickintensitytextbox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="jy2-mi-K3Z"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9190043417" green="0.99249125240000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -219,7 +228,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well Depth :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-vJ-7xz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water Depth :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-vJ-7xz">
                                         <rect key="frame" x="8" y="102" width="165.5" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -271,6 +280,9 @@
                                         <rect key="frame" x="241" y="102" width="97" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="welldepthaction:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="2yh-cd-Kdz"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9190043417" green="0.99249125240000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -361,11 +373,17 @@
                                         <rect key="frame" x="244" y="52" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="SurfaceTemperatureBox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="jFX-em-gks"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yow-u4-22a">
                                         <rect key="frame" x="244" y="182" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="TempatwellBox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="fKh-5L-NkN"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mud Line" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-U9-Yg0">
                                         <rect key="frame" x="8" y="111" width="192" height="40"/>
@@ -377,6 +395,9 @@
                                         <rect key="frame" x="244" y="116" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="MudLineBox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="07O-t7-zaY"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9190043417" green="0.99249125240000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -476,6 +497,9 @@
                                         <rect key="frame" x="249" y="34" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="elevationbox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="9Kh-MW-Ity"/>
+                                        </connections>
                                     </textField>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BIT-Lv-Cqf">
                                         <rect key="frame" x="297" y="249" width="51" height="31"/>
@@ -493,6 +517,9 @@
                                         <rect key="frame" x="249" y="302" width="97" height="35.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="WellDepthBox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="BrG-Go-uJd"/>
+                                        </connections>
                                     </textField>
                                     <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmE-lV-JKi">
                                         <rect key="frame" x="207" y="85" width="139" height="48.5"/>
@@ -734,6 +761,9 @@
                                         <rect key="frame" x="221" y="133" width="126" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="firstcasingbox:" destination="iJc-HD-uIP" eventType="editingDidEnd" id="jHB-wl-Xq5"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complation Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljb-4f-s51">
                                         <rect key="frame" x="8" y="44" width="165" height="21"/>
@@ -848,35 +878,51 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="-7" title="General" image="first" selectedImage="first" id="NEs-Xx-DKa"/>
                     <connections>
+                        <outlet property="DepthLabeler" destination="vOi-On-Dec" id="3dG-2Y-nsQ"/>
                         <outlet property="DifferentialStickingSwitch" destination="ag4-Id-Dux" id="BtN-ws-sCw"/>
+                        <outlet property="Elevationbox" destination="nqS-De-P9Z" id="TTl-cb-SMc"/>
                         <outlet property="MeasuredDepthLabel" destination="fte-jj-oR9" id="VCL-gS-8kw"/>
                         <outlet property="MudLinebox" destination="TKK-v5-yXf" id="WZ1-w8-vGh"/>
+                        <outlet property="Mudlinelabel" destination="cuY-U9-Yg0" id="VZ7-zB-8m0"/>
                         <outlet property="OverbalancedMarginSwitch" destination="ItL-Gl-rEC" id="6uO-Ta-cnz"/>
                         <outlet property="PlatformWellSwitch" destination="sHZ-XI-ZYN" id="VRm-zV-Dsg"/>
                         <outlet property="RiserMarginSwitch" destination="oPG-rm-CNw" id="Cke-Iw-l5n"/>
                         <outlet property="StabilityMarginSwitch" destination="xfC-eH-LfU" id="2Zn-PV-2Rp"/>
                         <outlet property="SubwellSwitch" destination="daN-sC-fF1" id="WVs-KV-C2o"/>
+                        <outlet property="SurfaceTemperatureLabel" destination="8lv-Mu-qQH" id="Y50-Pv-KD5"/>
                         <outlet property="SurfaceTemperaturebox" destination="pTA-fu-pPX" id="7zB-mE-d3a"/>
                         <outlet property="TemperatureWellBox" destination="yow-u4-22a" id="fa5-d6-PBY"/>
+                        <outlet property="TeperatureLabel" destination="Aac-5V-AhU" id="ymT-nB-SQU"/>
                         <outlet property="WellDepthBox" destination="icp-RN-eVh" id="1Sh-83-LRY"/>
                         <outlet property="WellFromDeviation" destination="BIT-Lv-Cqf" id="kEN-6s-b6N"/>
                         <outlet property="WellIsOffshoreSwitch" destination="QHL-WZ-fE8" id="JCK-Lp-lJJ"/>
                         <outlet property="WellisDeviatedSwitch" destination="JHj-kd-Hhn" id="qgs-qM-mEQ"/>
                         <outlet property="complationtype" destination="xhw-VM-OyS" id="bCZ-le-urt"/>
+                        <outlet property="elevationlabel" destination="Sru-JH-j0R" id="btJ-GT-gEe"/>
                         <outlet property="firstcasingdepth" destination="sj9-Fj-tBf" id="zQD-UK-dF3"/>
                         <outlet property="firstcasingdiameter" destination="f3m-pE-1Sr" id="XTn-3t-iQV"/>
+                        <outlet property="firstcasinglabel" destination="W6l-Qa-Jsg" id="Z8f-Zk-7Jf"/>
+                        <outlet property="generallabel" destination="pgU-yd-cNc" id="qgL-5b-fkP"/>
                         <outlet property="influxvolume" destination="Gyu-Op-8O9" id="7DZ-CJ-I7Y"/>
                         <outlet property="influxvolumebox" destination="Xkc-CV-fDq" id="b8h-wv-7Ke"/>
+                        <outlet property="influxvolumelabel" destination="5Vh-MW-Ycy" id="SmC-P4-0l1"/>
+                        <outlet property="kickbox" destination="Yy6-3Z-sZ4" id="GJy-F2-ke6"/>
                         <outlet property="kickintensity" destination="ulw-53-LaV" id="RLH-Ii-g7Z"/>
+                        <outlet property="kickintensityLabel" destination="Dg9-33-LVl" id="yt7-dn-JQL"/>
                         <outlet property="kickintensitybox" destination="wJw-Ws-fCs" id="j2U-Uk-APL"/>
                         <outlet property="kickmargin" destination="zS2-yl-xhx" id="S63-Hv-EXr"/>
                         <outlet property="kickmarginbox" destination="0cR-5O-ecF" id="LiE-n7-I8p"/>
+                        <outlet property="kickmarginlabel" destination="WaU-q8-Qz2" id="t80-2c-XF7"/>
                         <outlet property="lastcasingdiameter" destination="lRJ-EG-Sur" id="l6m-Ij-sAY"/>
                         <outlet property="lastcasinglabel" destination="i75-yJ-1Y7" id="XU6-ok-MTT"/>
                         <outlet property="lastholediameter" destination="A9T-mq-Fnc" id="9fs-r0-hew"/>
                         <outlet property="lastholelabel" destination="o7d-9u-blc" id="DWc-dr-lzk"/>
                         <outlet property="referencepointpicker" destination="WmE-lV-JKi" id="7eg-AW-nlK"/>
+                        <outlet property="tempatwelllabel" destination="MhR-iH-2v7" id="9oB-Zn-qFy"/>
                         <outlet property="wellDepthlabel" destination="OJM-uM-9q1" id="Buv-5P-wxu"/>
+                        <outlet property="wellDepthlabeler" destination="j2J-iL-9P5" id="OAw-an-Lls"/>
+                        <outlet property="welldepthlabel" destination="JmW-vJ-7xz" id="lDG-VA-TGM"/>
+                        <outlet property="welllabel" destination="dOB-Sc-o4z" id="LwH-PZ-joM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtr-AZ-x6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -954,17 +1000,37 @@
                         <viewControllerLayoutGuide type="top" id="8AB-Wb-4CR"/>
                         <viewControllerLayoutGuide type="bottom" id="mZk-68-rbX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mpf-n6-LTD">
+                    <view key="view" contentMode="scaleToFill" id="mpf-n6-LTD" customClass="test" customModule="uhclproject" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTz-tf-gEg" customClass="GraphView" customModule="uhclproject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
+                                <color key="backgroundColor" red="1" green="0.99082798240000003" blue="0.89102365520000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="0.62110949510356606" blue="0.17662794795574344" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="1" green="0.31871140795238651" blue="0.13328752852814441" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.62110949510000002" blue="0.17662794800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dTz-tf-gEg" firstAttribute="trailing" secondItem="mpf-n6-LTD" secondAttribute="trailingMargin" constant="20" id="09g-8F-krB"/>
+                            <constraint firstItem="dTz-tf-gEg" firstAttribute="top" secondItem="8AB-Wb-4CR" secondAttribute="bottom" constant="-20" id="QYT-oL-jAZ"/>
+                            <constraint firstItem="mZk-68-rbX" firstAttribute="top" secondItem="dTz-tf-gEg" secondAttribute="bottom" id="Z30-4t-uQ2"/>
+                            <constraint firstItem="dTz-tf-gEg" firstAttribute="leading" secondItem="mpf-n6-LTD" secondAttribute="leadingMargin" constant="-20" id="g2H-6h-VMc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" image="first" id="v7c-yP-erJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSl-QX-g8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="1127.9999999999995"/>
+            <point key="canvasLocation" x="106" y="1114"/>
         </scene>
     </scenes>
     <resources>
